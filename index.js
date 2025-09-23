@@ -9,12 +9,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // ---------- CORS CONFIG ----------
-const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174", "https://solosphere-da657.web.app", "https://solosphere-da657.firebaseapp.com"],
-  credentials: true, // ✅ must be lowercase
-  optionSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["http://localhost:5173", "http://localhost:5174", "https://solosphere-da657.web.app", "https://solosphere-da657.firebaseapp.com"],
+//   credentials: true, // ✅ must be lowercase
+//   optionSuccessStatus: 200,
+// };
+// app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
