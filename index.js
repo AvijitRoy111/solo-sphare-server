@@ -192,7 +192,8 @@ async function run() {
 run().catch(console.dir);
 
 // ---------- ROOT ----------
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  await client.db("admin").command({ ping: 1 });
   res.send("solosphere server is running!");
 });
 
